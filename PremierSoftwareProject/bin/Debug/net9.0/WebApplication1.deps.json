@@ -1,0 +1,136 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "WebApplication1/1.0.0": {
+        "dependencies": {
+          "FastEndpoints": "7.1.0-beta.8",
+          "Microsoft.AspNetCore.OpenApi": "9.0.8"
+        },
+        "runtime": {
+          "WebApplication1.dll": {}
+        }
+      },
+      "FastEndpoints/7.1.0-beta.8": {
+        "dependencies": {
+          "FastEndpoints.Attributes": "7.1.0-beta.8",
+          "FastEndpoints.Messaging.Core": "7.1.0-beta.8",
+          "FluentValidation": "12.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/FastEndpoints.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "7.1.0.0"
+          }
+        }
+      },
+      "FastEndpoints.Attributes/7.1.0-beta.8": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FastEndpoints.Attributes.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "7.1.0.0"
+          }
+        }
+      },
+      "FastEndpoints.Messaging.Core/7.1.0-beta.8": {
+        "runtime": {
+          "lib/netstandard2.1/FastEndpoints.Messaging.Core.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "7.1.0.0"
+          }
+        }
+      },
+      "FluentValidation/12.0.0": {
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.0.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.OpenApi/9.0.8": {
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.17"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "assemblyVersion": "9.0.8.0",
+            "fileVersion": "9.0.825.36808"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/8.0.0": {},
+      "Microsoft.OpenApi/1.6.17": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "assemblyVersion": "1.6.17.0",
+            "fileVersion": "1.6.17.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WebApplication1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FastEndpoints/7.1.0-beta.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZiIKhpDv/D8CKQZGe3rjZQ7QyBSD2LhnLfpMxIJiUPM/9WrLQMNocf7coyRjHWA2vyhdCsGnJ4aA6+WqnHweig==",
+      "path": "fastendpoints/7.1.0-beta.8",
+      "hashPath": "fastendpoints.7.1.0-beta.8.nupkg.sha512"
+    },
+    "FastEndpoints.Attributes/7.1.0-beta.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P2IwRoPxzFh0J8GajX+EZtaJLHaVuseTFEGymlnua0mzIGFLGgIgHfFUQVO54wBnrguoiGe+8JtEE27U6QLx3g==",
+      "path": "fastendpoints.attributes/7.1.0-beta.8",
+      "hashPath": "fastendpoints.attributes.7.1.0-beta.8.nupkg.sha512"
+    },
+    "FastEndpoints.Messaging.Core/7.1.0-beta.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-udBaI9zjtzs58tkVjr0mlqWUJOeNUybfjsUdXOEHuj0jWz+uDHQYnuJfavogxg/0xK3uAguulskyQH7xQF4FOA==",
+      "path": "fastendpoints.messaging.core/7.1.0-beta.8",
+      "hashPath": "fastendpoints.messaging.core.7.1.0-beta.8.nupkg.sha512"
+    },
+    "FluentValidation/12.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8NVLxtMUXynRHJIX3Hn1ACovaqZIJASufXIIFkD0EUbcd5PmMsL1xUD5h548gCezJ5BzlITaR9CAMrGe29aWpA==",
+      "path": "fluentvalidation/12.0.0",
+      "hashPath": "fluentvalidation.12.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.OpenApi/9.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BwF9sQCKmvu93C/pmKxJjPhF5fFB23MEcgTsGL+7W3wKLYawS4lyFSL5/qh00IJzuADLf+1SmvxMaphbyZYqQQ==",
+      "path": "microsoft.aspnetcore.openapi/9.0.8",
+      "hashPath": "microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bXJEZrW9ny8vjMF1JV253WeLhpEVzFo1lyaZu1vQ4ZxWUlVvknZ/+ftFgVheLubb4eZPSwwxBeqS1JkCOjxd8g==",
+      "path": "microsoft.extensions.primitives/8.0.0",
+      "hashPath": "microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.OpenApi/1.6.17": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Le+kehlmrlQfuDFUt1zZ2dVwrhFQtKREdKBo+rexOwaCoYP0/qpgT9tLxCsZjsgR5Itk1UKPcbgO+FyaNid/bA==",
+      "path": "microsoft.openapi/1.6.17",
+      "hashPath": "microsoft.openapi.1.6.17.nupkg.sha512"
+    }
+  }
+}

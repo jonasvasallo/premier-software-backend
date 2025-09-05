@@ -1,0 +1,37 @@
+@rootURL = http://localhost:5244
+
+###
+GET {{rootURL}}/api/items
+Accept: application/json
+
+###
+GET {{rootURL}}/api/items/1
+Accept: application/json
+
+###
+POST{{rootURL}}/api/items
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "nametest",
+    "description": "test desc",
+    "quantity": 10,
+    "price": 123
+}
+
+###
+PUT {{rootURL}}/api/items/3
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "updated name",
+  "description": "update test desc",
+  "quantity": 11,
+  "price": 1234
+}
+
+###
+DELETE {{rootURL}}/api/items/3
+Content-Type: application/json
