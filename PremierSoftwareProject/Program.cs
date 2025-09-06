@@ -3,7 +3,11 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", p => p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+});
+builder.Services.AddControllers().AddNewtonsoftJson();
 builder.Services.AddOpenApi();
 builder.Services.AddDbContext<InventoryDBContext>(options =>
     options.UseMySql(
@@ -19,6 +23,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowAll");
 app.MapControllers();
 
 app.Run();

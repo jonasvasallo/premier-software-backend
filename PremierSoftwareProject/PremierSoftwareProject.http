@@ -9,6 +9,10 @@ GET {{rootURL}}/api/items/1
 Accept: application/json
 
 ###
+GET {{rootURL}}/api/items/nostock
+Accept: application/json
+
+###
 POST{{rootURL}}/api/items
 Content-Type: application/json
 
@@ -28,10 +32,34 @@ Content-Type: application/json
   "id": 3,
   "name": "updated name",
   "description": "update test desc",
-  "quantity": 11,
+  "stock": 11,
   "price": 1234
+}
+
+###
+PATCH {{rootURL}}/api/items/3/stock/update
+Content-Type: application/json
+
+{
+    "stock": 12
 }
 
 ###
 DELETE {{rootURL}}/api/items/3
 Content-Type: application/json
+
+###
+GET {{rootURL}}/api/Sales
+Accept: application/json
+
+###
+GET {{rootURL}}/api/sales/1
+Accept: application/json
+
+###
+DELETE {{rootURL}}/api/Sales/26
+Content-Type: application/json
+
+###
+GET {{rootURL}}/api/stocklogs/2
+Accept: application/json

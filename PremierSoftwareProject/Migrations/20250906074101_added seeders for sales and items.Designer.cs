@@ -4,6 +4,7 @@ using InventoryWebApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InventoryWebApp.Migrations
 {
     [DbContext(typeof(InventoryDBContext))]
-    partial class InventoryDBContextModelSnapshot : ModelSnapshot
+    [Migration("20250906074101_added seeders for sales and items")]
+    partial class addedseedersforsalesanditems
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,46 +61,46 @@ namespace InventoryWebApp.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 9, 6, 20, 44, 47, 786, DateTimeKind.Utc).AddTicks(7141),
+                            CreatedAt = new DateTime(2025, 9, 6, 7, 41, 1, 190, DateTimeKind.Utc).AddTicks(9562),
                             Description = "High performance laptop for developers",
                             Name = "Laptop",
-                            Price = 28000.00m,
+                            Price = 1200.00m,
                             Stock = 10
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2025, 9, 6, 20, 44, 47, 786, DateTimeKind.Utc).AddTicks(8134),
+                            CreatedAt = new DateTime(2025, 9, 6, 7, 41, 1, 191, DateTimeKind.Utc).AddTicks(439),
                             Description = "Latest generation flagship smartphone",
                             Name = "Smartphone",
-                            Price = 22000.00m,
+                            Price = 800.00m,
                             Stock = 25
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2025, 9, 6, 20, 44, 47, 786, DateTimeKind.Utc).AddTicks(8136),
+                            CreatedAt = new DateTime(2025, 9, 6, 7, 41, 1, 191, DateTimeKind.Utc).AddTicks(441),
                             Description = "Noise-cancelling over-ear headphones",
                             Name = "Headphones",
-                            Price = 899.99m,
+                            Price = 199.99m,
                             Stock = 50
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2025, 9, 6, 20, 44, 47, 786, DateTimeKind.Utc).AddTicks(8138),
+                            CreatedAt = new DateTime(2025, 9, 6, 7, 41, 1, 191, DateTimeKind.Utc).AddTicks(442),
                             Description = "RGB backlit mechanical keyboard with blue switches",
                             Name = "Mechanical Keyboard",
-                            Price = 1699.00m,
+                            Price = 150.00m,
                             Stock = 15
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2025, 9, 6, 20, 44, 47, 786, DateTimeKind.Utc).AddTicks(8139),
+                            CreatedAt = new DateTime(2025, 9, 6, 7, 41, 1, 191, DateTimeKind.Utc).AddTicks(444),
                             Description = "High DPI wireless gaming mouse",
                             Name = "Gaming Mouse",
-                            Price = 489.99m,
+                            Price = 89.99m,
                             Stock = 30
                         });
                 });
@@ -116,13 +119,12 @@ namespace InventoryWebApp.Migrations
                     b.Property<DateTime>("PurchaseDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<decimal>("SellingPrice")
-                        .HasColumnType("decimal(65,30)");
-
                     b.Property<int>("UnitsSold")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ItemId");
 
                     b.ToTable("Sales");
 
@@ -131,72 +133,40 @@ namespace InventoryWebApp.Migrations
                         {
                             Id = 1,
                             ItemId = 1,
-                            PurchaseDate = new DateTime(2025, 8, 27, 20, 44, 47, 787, DateTimeKind.Utc).AddTicks(2360),
-                            SellingPrice = 28000.00m,
+                            PurchaseDate = new DateTime(2025, 8, 27, 7, 41, 1, 191, DateTimeKind.Utc).AddTicks(4934),
                             UnitsSold = 2
                         },
                         new
                         {
                             Id = 2,
                             ItemId = 2,
-                            PurchaseDate = new DateTime(2025, 8, 29, 20, 44, 47, 787, DateTimeKind.Utc).AddTicks(3044),
-                            SellingPrice = 22000.00m,
+                            PurchaseDate = new DateTime(2025, 8, 29, 7, 41, 1, 191, DateTimeKind.Utc).AddTicks(5539),
                             UnitsSold = 1
                         },
                         new
                         {
                             Id = 3,
                             ItemId = 3,
-                            PurchaseDate = new DateTime(2025, 9, 1, 20, 44, 47, 787, DateTimeKind.Utc).AddTicks(3050),
-                            SellingPrice = 899.99m,
+                            PurchaseDate = new DateTime(2025, 9, 1, 7, 41, 1, 191, DateTimeKind.Utc).AddTicks(5545),
                             UnitsSold = 3
                         },
                         new
                         {
                             Id = 4,
                             ItemId = 4,
-                            PurchaseDate = new DateTime(2025, 9, 3, 20, 44, 47, 787, DateTimeKind.Utc).AddTicks(3052),
-                            SellingPrice = 1699.00m,
+                            PurchaseDate = new DateTime(2025, 9, 3, 7, 41, 1, 191, DateTimeKind.Utc).AddTicks(5546),
                             UnitsSold = 1
                         },
                         new
                         {
                             Id = 5,
                             ItemId = 5,
-                            PurchaseDate = new DateTime(2025, 9, 5, 20, 44, 47, 787, DateTimeKind.Utc).AddTicks(3053),
-                            SellingPrice = 489.99m,
+                            PurchaseDate = new DateTime(2025, 9, 5, 7, 41, 1, 191, DateTimeKind.Utc).AddTicks(5547),
                             UnitsSold = 4
                         });
                 });
 
-            modelBuilder.Entity("InventoryWebApp.Models.StockLog", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<int>("ItemId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NewStock")
-                        .HasColumnType("int");
-
-                    b.Property<int>("OldStock")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ItemId");
-
-                    b.ToTable("StockLogs");
-                });
-
-            modelBuilder.Entity("InventoryWebApp.Models.StockLog", b =>
+            modelBuilder.Entity("InventoryWebApp.Models.Sale", b =>
                 {
                     b.HasOne("InventoryWebApp.Models.Item", "Item")
                         .WithMany()

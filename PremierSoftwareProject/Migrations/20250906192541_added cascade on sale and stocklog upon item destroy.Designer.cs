@@ -4,6 +4,7 @@ using InventoryWebApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InventoryWebApp.Migrations
 {
     [DbContext(typeof(InventoryDBContext))]
-    partial class InventoryDBContextModelSnapshot : ModelSnapshot
+    [Migration("20250906192541_added cascade on sale and stocklog upon item destroy")]
+    partial class addedcascadeonsaleandstockloguponitemdestroy
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,46 +61,46 @@ namespace InventoryWebApp.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 9, 6, 20, 44, 47, 786, DateTimeKind.Utc).AddTicks(7141),
+                            CreatedAt = new DateTime(2025, 9, 6, 19, 25, 40, 6, DateTimeKind.Utc).AddTicks(1441),
                             Description = "High performance laptop for developers",
                             Name = "Laptop",
-                            Price = 28000.00m,
+                            Price = 1200.00m,
                             Stock = 10
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2025, 9, 6, 20, 44, 47, 786, DateTimeKind.Utc).AddTicks(8134),
+                            CreatedAt = new DateTime(2025, 9, 6, 19, 25, 40, 6, DateTimeKind.Utc).AddTicks(2363),
                             Description = "Latest generation flagship smartphone",
                             Name = "Smartphone",
-                            Price = 22000.00m,
+                            Price = 800.00m,
                             Stock = 25
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2025, 9, 6, 20, 44, 47, 786, DateTimeKind.Utc).AddTicks(8136),
+                            CreatedAt = new DateTime(2025, 9, 6, 19, 25, 40, 6, DateTimeKind.Utc).AddTicks(2365),
                             Description = "Noise-cancelling over-ear headphones",
                             Name = "Headphones",
-                            Price = 899.99m,
+                            Price = 199.99m,
                             Stock = 50
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2025, 9, 6, 20, 44, 47, 786, DateTimeKind.Utc).AddTicks(8138),
+                            CreatedAt = new DateTime(2025, 9, 6, 19, 25, 40, 6, DateTimeKind.Utc).AddTicks(2366),
                             Description = "RGB backlit mechanical keyboard with blue switches",
                             Name = "Mechanical Keyboard",
-                            Price = 1699.00m,
+                            Price = 150.00m,
                             Stock = 15
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2025, 9, 6, 20, 44, 47, 786, DateTimeKind.Utc).AddTicks(8139),
+                            CreatedAt = new DateTime(2025, 9, 6, 19, 25, 40, 6, DateTimeKind.Utc).AddTicks(2367),
                             Description = "High DPI wireless gaming mouse",
                             Name = "Gaming Mouse",
-                            Price = 489.99m,
+                            Price = 89.99m,
                             Stock = 30
                         });
                 });
@@ -124,6 +127,8 @@ namespace InventoryWebApp.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ItemId");
+
                     b.ToTable("Sales");
 
                     b.HasData(
@@ -131,40 +136,40 @@ namespace InventoryWebApp.Migrations
                         {
                             Id = 1,
                             ItemId = 1,
-                            PurchaseDate = new DateTime(2025, 8, 27, 20, 44, 47, 787, DateTimeKind.Utc).AddTicks(2360),
-                            SellingPrice = 28000.00m,
+                            PurchaseDate = new DateTime(2025, 8, 27, 19, 25, 40, 6, DateTimeKind.Utc).AddTicks(6447),
+                            SellingPrice = 0m,
                             UnitsSold = 2
                         },
                         new
                         {
                             Id = 2,
                             ItemId = 2,
-                            PurchaseDate = new DateTime(2025, 8, 29, 20, 44, 47, 787, DateTimeKind.Utc).AddTicks(3044),
-                            SellingPrice = 22000.00m,
+                            PurchaseDate = new DateTime(2025, 8, 29, 19, 25, 40, 6, DateTimeKind.Utc).AddTicks(6958),
+                            SellingPrice = 0m,
                             UnitsSold = 1
                         },
                         new
                         {
                             Id = 3,
                             ItemId = 3,
-                            PurchaseDate = new DateTime(2025, 9, 1, 20, 44, 47, 787, DateTimeKind.Utc).AddTicks(3050),
-                            SellingPrice = 899.99m,
+                            PurchaseDate = new DateTime(2025, 9, 1, 19, 25, 40, 6, DateTimeKind.Utc).AddTicks(6963),
+                            SellingPrice = 0m,
                             UnitsSold = 3
                         },
                         new
                         {
                             Id = 4,
                             ItemId = 4,
-                            PurchaseDate = new DateTime(2025, 9, 3, 20, 44, 47, 787, DateTimeKind.Utc).AddTicks(3052),
-                            SellingPrice = 1699.00m,
+                            PurchaseDate = new DateTime(2025, 9, 3, 19, 25, 40, 6, DateTimeKind.Utc).AddTicks(6964),
+                            SellingPrice = 0m,
                             UnitsSold = 1
                         },
                         new
                         {
                             Id = 5,
                             ItemId = 5,
-                            PurchaseDate = new DateTime(2025, 9, 5, 20, 44, 47, 787, DateTimeKind.Utc).AddTicks(3053),
-                            SellingPrice = 489.99m,
+                            PurchaseDate = new DateTime(2025, 9, 5, 19, 25, 40, 6, DateTimeKind.Utc).AddTicks(6966),
+                            SellingPrice = 0m,
                             UnitsSold = 4
                         });
                 });
@@ -194,6 +199,17 @@ namespace InventoryWebApp.Migrations
                     b.HasIndex("ItemId");
 
                     b.ToTable("StockLogs");
+                });
+
+            modelBuilder.Entity("InventoryWebApp.Models.Sale", b =>
+                {
+                    b.HasOne("InventoryWebApp.Models.Item", "Item")
+                        .WithMany()
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Item");
                 });
 
             modelBuilder.Entity("InventoryWebApp.Models.StockLog", b =>

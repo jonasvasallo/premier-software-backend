@@ -131,3 +131,8 @@ F:\programming_projects\jetbrains_csharp\WebApplication1\PremierSoftwareProject\
 F:\programming_projects\jetbrains_csharp\WebApplication1\PremierSoftwareProject\obj\Debug\net9.0\PremierSoftwareProject.pdb
 F:\programming_projects\jetbrains_csharp\WebApplication1\PremierSoftwareProject\obj\Debug\net9.0\PremierSoftwareProject.genruntimeconfig.cache
 F:\programming_projects\jetbrains_csharp\WebApplication1\PremierSoftwareProject\obj\Debug\net9.0\ref\PremierSoftwareProject.dll
+F:\programming_projects\jetbrains_csharp\WebApplication1\PremierSoftwareProject\obj\Debug\net9.0\PremierSoftwareProject.sourcelink.json
+F:\programming_projects\jetbrains_csharp\WebApplication1\PremierSoftwareProject\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
+F:\programming_projects\jetbrains_csharp\WebApplication1\PremierSoftwareProject\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+F:\programming_projects\jetbrains_csharp\WebApplication1\PremierSoftwareProject\bin\Debug\net9.0\Newtonsoft.Json.dll
+F:\programming_projects\jetbrains_csharp\WebApplication1\PremierSoftwareProject\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll
